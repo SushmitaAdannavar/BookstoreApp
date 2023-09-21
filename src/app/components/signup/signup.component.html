@@ -1,0 +1,67 @@
+
+    <div class="maindiv" [style.backgroundColor]="bgcolor?'#00000029':'#9d9d9d'">
+        <div class="img">
+            <img src="../../../assets/Screenshot 2023-09-20 125054.png" class="actualimg">
+            <p class="imgtext">ONLINE BOOK SHOPPING</p>
+        </div>
+        <div class="signup">
+            <mat-tab-group animationDuration="0ms" fitInkBarToContent class="tab">
+                <mat-tab label="LOGIN">
+                    <app-login></app-login>
+                </mat-tab>
+                <mat-tab label="SIGNUP">
+                    <div class="form" [formGroup]="signupForm">
+                        
+                        <div>
+                            <label>Full Name</label>
+                            <div class="form1">
+                                <div class="innerborder">
+                                <mat-form-field appearance="outline" class="formfields">
+                                    <input matInput formControlName="fullName">
+                                    <mat-error class="errors">Enter fullname</mat-error>
+                                </mat-form-field></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Email Id</label>
+                            <div class="form1">
+                                <div class="innerborder">
+                                <mat-form-field appearance="outline" class="formfields">
+                                    <input matInput formControlName="email">
+                                    <mat-error class="errors">Invalid email</mat-error>
+                                </mat-form-field></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <div class="form1">
+                                <div class="innerborder">
+                                <mat-form-field appearance="outline" class="formfields">
+                                    <input matInput formControlName="password"  [type]="hide ? 'password' : 'text'">
+                                    <button mat-icon-button matSuffix (click)="hide = !hide">
+                                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                    <mat-error class="errors">Password must be atleast 6 characters</mat-error>
+                                </mat-form-field></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Mobile Number</label>
+                            <div class="form1">
+                                <div class="innerborder">
+                                <mat-form-field appearance="outline" class="formfields">
+                                    <input matInput formControlName="phoneNumber">
+                                    <mat-error class="errors">Enter phone number</mat-error>
+                                </mat-form-field></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button mat-raised-button style="background-color: brown;color: white;"
+                                class="button" (click)="signup()">Signup</button>
+                        </div>
+                    
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>

@@ -1,0 +1,49 @@
+.form {
+    margin: 15px 63px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.form1 {
+    
+    height: 55px;
+    width: 260px;
+    overflow: hidden;
+    
+}
+
+
+.formfields {
+
+    width: 269px;
+    opacity: 1;height: 90px;
+    margin-top: -10px;
+    margin-left: -4px;
+}
+
+.button {
+    background-color: brown;
+    color: white;margin-top: 15px;
+    width: 263px;
+    height: 43px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    height: 43px;
+    width: 263px;
+    justify-content: space-between;
+    margin: 75px 63px;
+}
+
+.innerborder{
+    border: 2px solid #E2E2E2;border-radius: 2px;height:35px
+}
+
+.errors{
+    overflow: visible;margin-top: -23px;
+}
